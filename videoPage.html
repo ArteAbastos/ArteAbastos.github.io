@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>This is the title of the webpage!</title>
+    <title>Pop</title>
   </head>
   <style>
     #myVideo {
@@ -17,11 +17,11 @@
 /* Add some content at the bottom of the video/page */
 .content {
   position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  bottom: 2%;
+  background: rgba(0, 0, 0, 0.0);
   color: #f1f1f1;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Style the button used to pause/play the video */
@@ -30,9 +30,12 @@
   font-size: 18px;
   padding: 10px;
   border: none;
+  margin-left: 45%;
+  text-align: center;
   background: #000;
   color: #fff;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 #myBtn:hover {
@@ -106,7 +109,10 @@ body{
     <video autoplay muted loop id="myVideo">
         <source src="videos/clip_pe.mp4" type="video/mp4">
     </video>
-
+    <div class="content">
+        <button id="myBtn" onclick="myFunction()">Unmute</button>
+      </div>
+  
     <div class="wrapper">
         <!--Top menu -->
         <div class="sidebar">
@@ -144,7 +150,7 @@ body{
               </a>
           </li>
           <li>
-              <a href="#">
+              <a href="about.html">
                   <span class="item">ABOUT</span>
               </a>
           </li>
@@ -154,11 +160,28 @@ body{
               </a>
           </li>
       </ul>
+    </div>
 
+    
     </div>
 
 
 
-    </div>
+    <script>  
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+    
+  if (video.muted) {
+    video.muted = false;
+    btn.innerHTML = "Mute";
+  } else {
+    video.muted = true;
+    btn.innerHTML = "Unmute";
+  }
+}
+      </script>
+
   </body>
 </html>
