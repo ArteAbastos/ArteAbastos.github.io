@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+    background-color: rgb(255, 225, 28);
+}
+
+h1{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+}
+
+.children-1 {
+  width: 12%;
+}
+
+.children-2 {
+  width: 88%;
+  overflow-y: hidden;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 800px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper .sidebar{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 0%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 0px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: white;
+    background:rgba(.5, .5, .5, .5);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 1%;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+footer img{
+  margin: 20px;
+  max-width: 64px;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<div class="parent">
+    <div class="children-1">
+        <div class="wrapper">
+            <div class="sidebar">   
+            <div class="profile">
+                <img src="images/LOGO_ARTEABASTOS.png">
+            </div>
+        
+            <ul>
+              <li>
+                  <a href="index.html">
+                      <span class="item">HOME</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="galery.html">
+                      <span class="item">GALERIA</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="about.html">
+                      <span class="item">ABOUT</span>
+                  </a>
+              </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="children-2">
+        <h1>Galería</h1>
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/galery/GALERIA_1.jpg">
+                <img src="images/galery/GALERIA_1.jpg" alt="Cinque Terre" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/galery/GALERIA_2.jpg">
+                <img src="images/galery/GALERIA_2.jpg" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="images/galery/GALERIA_3.jpg">
+                <img src="images/galery/GALERIA_3.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="images/galery/GALERIA_4.jpg">
+                  <img src="images/galery/GALERIA_4.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+              </div>
+          </div>
+          
+          <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="images/galery/GALERIA_5.jpg">
+                  <img src="images/galery/GALERIA_5.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+              </div>
+            </div>
+          
+          <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="images/galery/GALERIA_6.jpg">
+                  <img src="images/galery/GALERIA_6.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+              </div>
+          </div>
+          
+          <div class="clearfix"></div>
+    </div>
+</div>
+
+<footer>
+    <div>
+      <a href="https://www.tiktok.com/@arteyabastos"><img src="images/TIKTOK.png" class="icon"></a>
+      <a href="https://www.instagram.com/arte.yabastos/"><img src="images/INSTAGRAMS.png" class="icon"></a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!--Some code retrieved from: https://dev.to/code_mystery/sidebar-menu-using-html-and-css-o49-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Pop</title>
+  </head>
+  <style>
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+.up {
+    position: fixed;
+    top: 0%;
+    left: 95%;
+    background: rgba(0, 0, 0, 0.0);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+}
+
+.flecha{
+    max-width: 60px;
+    height: auto;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 100px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  margin-left: 45%;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 0%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 0px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: white;
+    background:rgba(.5, .5, .5, .5);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+</style>
+
+<body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="videos/CLIP BRODY_5.1.mp4" type="video/mp4">
+    </video>
+
+    <div class="up">
+        <a href="video_b.html"><img class="flecha" src="images/FLECHA.png"></a>   
+    </div>
+    <div class="content">
+        <button id="myBtn" onclick="myFunction()">Unmute</button> 
+    </div>
+
+  
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+            <!--menu item-->
+            
+        <div class="profile">
+            <img src="images/LOGO_ARTEABASTOS.png">
+        </div>
+
+        <ul>
+          <li>
+              <a href="index.html">
+                  <span class="item">HOME</span>
+              </a>
+          </li>
+          <li>
+              <a href="galery.html">
+                  <span class="item">GALERIA</span>
+              </a>
+          </li>       
+          <li>
+              <a href="about.html">
+                  <span class="item">ABOUT</span>
+              </a>
+          </li>
+      </ul>
+    </div>
+
+    
+    </div>
+
+
+
+    <script>  
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+    
+  if (video.muted) {
+    video.muted = false;
+    btn.innerHTML = "Mute";
+  } else {
+    video.muted = true;
+    btn.innerHTML = "Unmute";
+  }
+}
+      </script>
+
+  </body>
+</html>
