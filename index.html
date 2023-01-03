@@ -4,28 +4,56 @@
     <title>This is the title of the webpage!</title>
   </head>
   <style>
+
+@font-face {
+  font-family: "Custom";
+  src: url("fonts/HindSiliguri-Regular.ttf");
+}
+
     body {
-      background-image: url("images/about us.png");
+      background-image: url("images/IndexBG.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+      font-family: "Custom";
     }
 
     .logo {
       position: fixed;
-      bottom: 30%;
-      right:30%;
+      bottom: 35%;
+      right:25%;
       max-width: 1080px;
       height: auto;
     }
 
     .initButton {
       position: fixed;
-      bottom: 10%;
-      right:30%;
+      bottom: 15%;
+      right:45%;
       max-width: 256px;
       height: auto;
     }
+
+    footer {
+      background-color: black;
+      position: fixed;
+      left: 0;
+      bottom: 0%;
+      width: 100%;
+      color: white;
+      text-align: center;
+}
+
+footer img{
+  margin-top: 10px;
+  max-width: 540px;
+  height: auto;
+}
+
+footer p{
+  margin-top: 10px;
+  height: auto;
+}
 
     </style>
   <body>
@@ -33,5 +61,12 @@
     <a href="video_a.html">
       <img src="images/BOTON_INICIAR.png" class="initButton">
     </a>
+
+    <footer>
+      <div>
+        <img src="images/text.png" class="icon">  
+        <img src="images/SecretariaCultura_SistemadeApoyo_blanco-01.png" class="icon">    
+      </div>
+    </footer>
   </body>
 </html>
